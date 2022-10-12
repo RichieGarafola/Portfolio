@@ -130,8 +130,7 @@ if selected == "Projects":
     with st.container():
         image_column, text_column = st.columns((1,2))
         with image_column:
-#             st.image("./Images/excelSales.png")
-            st.write()
+            st.image("./Images/ExcelSales.png")
             
         with text_column:
             st.subheader("")
