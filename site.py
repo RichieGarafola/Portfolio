@@ -111,7 +111,8 @@ if selected == "Projects":
             st.image("./Images/expenseSheet.gif")
         with text_column:
             st.subheader("Expense Sheet")
-            st.markdown('<p class="font"> Keep track of your monthly income and expenses without the need for Excel!                 In this platform I will lever the power of Python using the streamlit library to build an interactive web                 application. Store your monthly reports using the FREE NoSQL Database.</p>',unsafe_allow_html=True) 
+            st.markdown('<p class="font"> Keep track of your monthly income and expenses without the need for Excel!                 In this platform I will lever the power of Python using the streamlit library to build an interactive web                 application. Store your monthly reports using the FREE NoSQL Database.</p>',unsafe_allow_html=True)
+            st.markdown('<p class="font"> Some Libraries used: streamlit, plotly, calendar, datetime, database</p>',unsafe_allow_html=True)            
             st.subheader("[Deployed Dashboard ](https://richiegarafola-expensesheet.streamlitapp.com/)")
             st.subheader("[GitHub Repo ](https://github.com/RichieGarafola/ExpenseSheet)")
 
@@ -123,6 +124,7 @@ if selected == "Projects":
         with text_column:
             st.subheader("Sales Analysis")
             st.markdown('<p class="font"> A company has been tracking their sales for the year of 2019. At the end of the fisical year the company decided to upgrade tech from using Excel to a more optimal SQL-centric database. The data contains hundreds of thousands of electronics store purchases broken down by `Order ID`, `Product`, `Quantity Ordered`, `Price Each`, `Order Date`, `Purchase Address`.</p>',unsafe_allow_html=True) 
+            st.markdown('<p class="font"> Some Libraries used: streamlit, pandas, matplotlib, plotly, path </p>',unsafe_allow_html=True)   
             st.subheader("[Deployed Dashboard ](https://salesdashboard.streamlitapp.com/)")
             st.subheader("[GitHub Repo ](https://github.com/RichieGarafola/Sales_Analysis)")
 
@@ -133,7 +135,8 @@ if selected == "Projects":
             st.image("./Images/excelSales.gif")
         with text_column:
             st.subheader("Interact with Excel Sales")
-            st.markdown('<p class="font"> Aggregate your Excel spreadsheets interactively! In this platform I will display the power of Python using the streamlit library to build an interactive web application. I will build a KPI that aggregates data tailored to the users interest and visually display the output </p>',unsafe_allow_html=True) 
+            st.markdown('<p class="font"> Aggregate your Excel spreadsheets interactively! In this platform I will display the power of Python using the streamlit library to build an interactive web application. I will build a KPI that aggregates data tailored to the users interest and visually display the output </p>',unsafe_allow_html=True)
+            st.markdown('<p class="font"> Some Libraries used: streamlit, pandas, plotly, openpyxl </p>',unsafe_allow_html=True) 
             st.subheader("[Deployed Dashboard ](https://richiegarafola-kpi-sales.streamlitapp.com/)")
             st.subheader("[GitHub Repo ](https://github.com/RichieGarafola/SalesAnalysisExcelKPI)")
             
@@ -145,6 +148,7 @@ if selected == "Projects":
         with text_column:
             st.subheader("Exploratory Data Analysis Tool")
             st.markdown('<p class="font"> Exploratory Data Analysis refers to the critical process of performing initial investigations on data to discover patterns, spot anomalies, test hypothesis and to check assumptions with the help of summary statistics and graphical representations. In this platform I will display the power of Python using the streamlit library to build an EDA tool. I will build a KPI that performs complete customized data analysis based on the data provided by the user.</p>',unsafe_allow_html=True) 
+            st.markdown('<p class="font"> Some Libraries used: streamlit, pandas, pandas profiling </p>',unsafe_allow_html=True) 
             st.subheader("[Deployed Dashboard ](https://richiegarafola-eda.streamlitapp.com/)")
             st.subheader("[GitHub Repo ](https://github.com/RichieGarafola/EDA)")
             
@@ -156,6 +160,8 @@ if selected == "Projects":
         with text_column:
             st.subheader("Housing Price Sentiment Advisor")
             st.markdown('<p class="font"> Analyze the 15 and 30 year fixed mortgage rates from FRED economic database and look for correlations with Case Shiller housing prices. The fixed mortgage rates will act as indicators to help us understand the future outlook of the housing market. The economic sentiment will be gauged using NLP to see if there is a correlation with sentiment on twitter and our predictor. </p>',unsafe_allow_html=True) 
+            st.markdown('<p class="font"> Some Libraries used: Google Colab, dot env, news api, snsrape, hvplot, holoviews, os, pandas, numpy, matplotlib, seaborn, pandas data reader, datetime, DateOffSet, SkLearn, tensorflow, nltk, wordcloud,  prophet</p>',unsafe_allow_html=True)
+            st.markdown('<p class="font"> Some Machine Learning and algorithms used: train test split, standard scaler, sequential, classification report, Sentiment Intensity Analyzer, Prophet, tfidvectorizer, port stemmer, word net lemmatizer, accuracy score, Naive Bayes (Multionominal NB and Complement NB), logistic regressuin, SVC, SVM, AdaBoostClassifier, Decision Tree Classifier, Passive Aggressive Classifier </p>',unsafe_allow_html=True) 
             st.subheader("[GitHub Repo ](https://github.com/RichieGarafola/Housing_Price_Sentiment_Advisor)")
             
 # RoboAdvisor        
@@ -166,6 +172,7 @@ if selected == "Projects":
         with text_column:
             st.subheader("Robo Advisor")
             st.markdown('<p class="font"> An AWS chatbot using Lambda and Lex that will recommend an investment portfolio for a retirement plan. </p>',unsafe_allow_html=True) 
+            st.markdown('<p class="font"> Mainly worked with AWS Lambda and AWS Lex </p>',unsafe_allow_html=True) 
             st.subheader("[GitHub Repo ](https://github.com/RichieGarafola/RoboAdvisor)")
             
 # Forex Travel Planner        
@@ -176,6 +183,7 @@ if selected == "Projects":
         with text_column:
             st.subheader("Travel Planner based on Currency Conversion")
             st.markdown('<p class="font"> Travel planning tool that will allow the end user to select a set of countries they would like to travel to and the travel timeframe. The tool will analyze historical forex data and predict the country that will have the most favorable currency within the given timeframe for traveling. </p>',unsafe_allow_html=True) 
+            
             st.subheader("[GitHub Repo ](https://github.com/RichieGarafola/Travel_Planner_Currency_Conversion)")
             
 # Machine Learning Data Analysis        
