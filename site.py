@@ -272,7 +272,7 @@ if selected == "Projects":
     with st.container():
         image_column, text_column = st.columns((1,2))
         with image_column:
-            st.image("./Images/financial-planner.png", width=400)
+            st.image("./Images/financial-planner.png", width=300)
         with text_column:
             st.subheader("Financial Planner")
             st.markdown('<p class="font"> Create a tool for a credit union that helps their members enhance their financial health. Develop a prototype application to demo using APIs as part of the technical solution. The first financial analysis tool will be a personal finance planner that will allow users to visualize their savings composed by investments in shares and cryptocurrencies to assess if they have enough money as an emergency fund. The second tool will be a retirement planning tool that will use the Alpaca API to fetch historical closing prices for a retirement portfolio composed of stocks and bonds, then run Monte Carlo simulations to project the portfolio performance at 30 years. Use the Monte Carlo data to calculate the expected portfolio returns given a specific initial investment amount. </p>',unsafe_allow_html=True) 
