@@ -130,7 +130,7 @@ if selected == "Projects":
     with st.container():
         image_column, text_column = st.columns((1,2))
         with image_column:
-            st.image("./Images/excelSales.gif")
+            st.image("./Images/ExcelSales.gif")
         with text_column:
             st.subheader("Interact with Excel Sales")
             st.markdown('<p class="font"> Aggregate your Excel spreadsheets interactively! In this platform I will display the power of Python using the streamlit library to build an interactive web application. I will build a KPI that aggregates data tailored to the users interest and visually display the output </p>',unsafe_allow_html=True) 
