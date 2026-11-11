@@ -2,21 +2,28 @@ name: Portfolio smoke tests
 
 on:
   push:
-    branches: [main, "refresh/**"]
+    branches: [main, "refresh/**", "fix/**"]
   pull_request:
   workflow_dispatch:
 
 jobs:
   tests:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
           cache: "pip"
       - name: Install dependencies
         run: python -m pip install -r requirements.txt -r requirements-dev.txt
+      - name: Verify Streamlit/Altair imports
+        run: |
+          python -c "import streamlit, altair; print('Streamlit:', streamlit.__version__, 'Altair:', altair.__version__); assert streamlit.__version__ == '1.40.2'; assert altair.__version__ == '5.5.0'"
       - name: Compile application
         run: python -m compileall -q site.py
       - name: Test all three views without external data
