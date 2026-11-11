@@ -146,11 +146,9 @@ else:
         "I focus on systems that make their calculations and underlying records explainable."
     )
     st.subheader("Technical toolkit")
-    st.markdown(
-        "**Data:** Python, pandas, SQL, PostgreSQL, DuckDB, Parquet, ETL and validation  \n"
-        "**BI:** Power BI, DAX, Power Query, Excel, financial and operational reporting  \n"
-        "**Engineering:** pytest, GitHub Actions, Git, Docker, Streamlit, REST APIs"
-    )
+    st.markdown("**Data:** Python, pandas, SQL, PostgreSQL, DuckDB, Parquet, ETL and validation")
+    st.markdown("**BI:** Power BI, DAX, Power Query, Excel, financial and operational reporting")
+    st.markdown("**Engineering:** pytest, GitHub Actions, Git, Docker, Streamlit, REST APIs")
     st.subheader("Education & certification")
     st.write("B.S. Computer Science — Capella University (2026)")
     st.write("Arizona State University FinTech Bootcamp · CompTIA Project+")
