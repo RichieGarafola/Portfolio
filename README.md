@@ -1,56 +1,66 @@
-# Richie Garafola — Engineering & Analytics Portfolio
+# Richie Garafola | Data Engineering & Analytics
 
-**Data Engineering · Financial Analytics · Business Intelligence · Automation**
+A curated, screenshot-first portfolio of practical work in **data engineering, financial reconciliation, business intelligence, and automation**.
 
-A curated portfolio of work in data validation, financial reconciliation, repeatable ETL, business intelligence, and earlier quantitative research.
+> Reliable inputs. Traceable calculations. Decision-ready outputs.
 
-> I build data systems that make complex information reliable, traceable, and actionable.
+[GitHub profile](https://github.com/RichieGarafola) · [LinkedIn](https://www.linkedin.com/in/richiegarafola) · [DeltaAnalysis demo](https://deltaanalysis.streamlit.app/)
 
-**[GitHub profile](https://github.com/RichieGarafola) · [LinkedIn](https://www.linkedin.com/in/richiegarafola)**
+## Portfolio highlights
 
-## Featured applications
+The Streamlit landing page opens with a concise professional introduction and direct links to featured work. Project cards include genuine screenshots sourced from the corresponding public repositories, an outcome statement, technical stack, and repository links.
 
-| Project | What it demonstrates | Links |
+| Featured project | Primary focus | Screenshot source |
 | --- | --- | --- |
-| **DeltaAnalysis** | Bidirectional CSV/Excel comparison, field-level change tracking, duplicate-key diagnostics, audit-ready exports | [Source](https://github.com/RichieGarafola/DeltaAnalysis) · [Live app](https://deltaanalysis.streamlit.app) |
-| **ReconcileKit** | Invoice-to-payment reconciliation in integer cents, exceptions, append-only reviewer audit trail, SQL reporting, Power BI | [Source](https://github.com/RichieGarafola/ReconcileKit) |
-| **ETL Pipeline Builder** | Ordered transformations and auditable execution | [Source](https://github.com/RichieGarafola/etl-pipeline-builder) |
-| **Budget Variance Analyzer** | Budget-versus-actual analysis and projections | [Source](https://github.com/RichieGarafola/budget-variance-analyzer) |
-| **Financial KPI Dashboard** | Financial performance metrics | [Source](https://github.com/RichieGarafola/financial-kpi-dashboard) |
-| **docutil** | Repeatable document conversion and batch processing | [Source](https://github.com/RichieGarafola/docutil) |
+| [DeltaAnalysis](https://github.com/RichieGarafola/DeltaAnalysis) | Audit-ready file comparison and reconciliation | [Application results](https://github.com/RichieGarafola/DeltaAnalysis/blob/main/docs/screenshots/03_results_dashboard.png) |
+| [ReconcileKit](https://github.com/RichieGarafola/ReconcileKit) | Financial exception handling and auditability | [Power BI overview](https://github.com/RichieGarafola/ReconcileKit/blob/main/powerbi/screenshots/1-reconciliation-overview.png) |
+| [ForexCorrelationMatrix](https://github.com/RichieGarafola/ForexCorrelationMatrix) | Return-based FX correlation analysis | [Historical screenshot](https://github.com/RichieGarafola/ForexCorrelationMatrix/blob/main/Images/CorrelationMatrix.png) |
+| [BankingCustomerInsights](https://github.com/RichieGarafola/BankingCustomerInsights) | Source-grounded customer analytics | [Historical screenshot](https://github.com/RichieGarafola/BankingCustomerInsights/blob/main/Images/app.png) |
+| [ETL Pipeline Builder](https://github.com/RichieGarafola/etl-pipeline-builder) | Repeatable transformations and validation | [Application overview](https://github.com/RichieGarafola/etl-pipeline-builder/blob/main/screenshots/01_overview.png) |
+| [Financial KPI Dashboard](https://github.com/RichieGarafola/financial-kpi-dashboard) | Financial performance reporting | [Application overview](https://github.com/RichieGarafola/financial-kpi-dashboard/blob/main/screenshots/01_overview.png) |
 
-## Earlier work
+**Also featured:** [Budget Variance Analyzer](https://github.com/RichieGarafola/budget-variance-analyzer) and [docutil](https://github.com/RichieGarafola/docutil).
 
-The Streamlit site includes a separate **Earlier Work** section for exploratory and educational projects, including forex correlation, Fama–French factors, GARCH, hidden Markov models, banking dashboards, and forecasting. These are historical learning artifacts, not claims of production-grade or predictive performance.
+**Historical screenshot disclosure:** The Forex and Banking images originate from older versions of their applications. Their cards explicitly identify these screenshots as historical rather than representing the current UI.
 
 ## Run locally
 
-The application entry point is `site.py`.
+Python 3.10 or 3.11:
 
 ```bash
 python -m venv .venv
-# Activate .venv using your shell's activation command.
+# Activate the virtual environment using your operating system's shell.
 python -m pip install -r requirements.txt
 python -m streamlit run site.py
 ```
 
-The site uses Streamlit and Python standard-library utilities only. Remote project links and images may need internet access; the app does not require API keys.
+The site needs no API keys, database, or secrets. Screenshots are loaded over HTTPS from GitHub's publicly hosted raw image files, so an internet connection is required to display them. No application data is fetched at startup.
 
-## Deployment
+## Automated checks
 
-If deploying on Streamlit Community Cloud, configure **`site.py`** as the main file. The older hosted URL in the original README has not been independently verified; do not treat it as a confirmed active deployment.
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
 
-## Design and data notes
+GitHub Actions tests the portfolio on Python 3.10 and 3.11. The smoke tests cover the default featured view, category filtering, and navigation between earlier work and the About page.
 
-- The modernized app keeps featured engineering projects separate from older educational research.
-- Project descriptions link directly to their source repositories for verification.
-- Demo datasets are synthetic or fixed-seed generated where documented by the underlying projects.
-- No employer/client data should be added to this public site.
-- The original Streamlit implementation remains accessible in Git history.
+## Deploy on Streamlit Community Cloud
 
-## Next improvements
+Select the **main** branch and **site.py** entry point in `RichieGarafola/Portfolio`.
 
-- Verify deployment and public links after merging.
-- Add screenshots of the actual DeltaAnalysis UI when a stable image is available.
-- Add lightweight application smoke tests and CI.
-- Review and modernize selected earlier repositories independently, keeping their history intact.
+> Important: the repository retains an older, divergent `master` branch. Deploying `master` will serve the obsolete portfolio with incompatible old dependencies. The modernized app lives on `main`.
+
+`requirements.txt` pins a compatible Streamlit/Altair pair to prevent the previously reported `altair.vegalite.v4` import error on the old deployment.
+
+## Data, claims, and image provenance
+
+- Links point to the original source repositories for independent inspection.
+- Real screenshots are not generated mockups; project captions distinguish historical UIs where needed.
+- Public examples may use synthetic or sample datasets as described in their individual repositories.
+- Do not upload confidential customer, government, or employer data to these public apps.
+- Earlier research is intentionally kept in a separate section and not described as production trading systems.
+
+## Design choices
+
+The visual upgrade uses Streamlit built-ins and a small amount of presentation CSS. It avoids extra front-end dependencies and keeps the original navigation and project-history structure for maintainability. The source of truth for project links and card descriptions is the `PROJECTS` collection in `site.py`.
