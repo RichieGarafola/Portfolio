@@ -147,8 +147,8 @@ else:
     )
     st.subheader("Technical toolkit")
     st.markdown(
-        "**Data:** Python, pandas, SQL, PostgreSQL, DuckDB, Parquet, ETL and validation  \\n"
-        "**BI:** Power BI, DAX, Power Query, Excel, financial and operational reporting  \\n"
+        "**Data:** Python, pandas, SQL, PostgreSQL, DuckDB, Parquet, ETL and validation  \n"
+        "**BI:** Power BI, DAX, Power Query, Excel, financial and operational reporting  \n"
         "**Engineering:** pytest, GitHub Actions, Git, Docker, Streamlit, REST APIs"
     )
     st.subheader("Education & certification")
