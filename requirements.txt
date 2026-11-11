@@ -1,1 +1,3 @@
-streamlit>=1.31,<2
+# Explicit compatible pair to prevent legacy Streamlit / modern Altair mismatch.
+streamlit==1.40.2
+altair==5.5.0
